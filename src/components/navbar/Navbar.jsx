@@ -1,19 +1,22 @@
 import "bootstrap";
 import { Link } from "react-router-dom";
+import headerlogo from "../../assets/home.svg";
 
 const Navbar = () => {
   return (
-    <div className="container-fluid bg-light p-4 fs-4">
+    <div className="container-fluid bg-dark p-4 fs-4 text-warning">
       <div className="row d-flex ">
         <div className="col-6 d-flex ">
-          <Link to="/home" className="text-decoration-none ">
+          <Link to="/home" className="text-decoration-none text-warning">
             <big>&lt;R</big>
             <small>USTU</small>
-            <small>KETEN</small> <big>R</big>
+            <small>KETEN</small>
+            <img className="col-1" src={headerlogo} alt="" />
+            <big>R</big>
             <small>ECIPE/&gt;</small>
           </Link>
         </div>
-        <div className="col-6 d-flex justify-content-end gap-5 ">
+        <div className="col-6 d-flex justify-content-end gap-5  text-dark">
           <Link to="/about" className="text-decoration-none ">
             ABOUT
           </Link>
