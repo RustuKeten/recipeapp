@@ -15,12 +15,12 @@ const Home = () => {
           >
             SEARCH
           </button>
-          <select className="form-select w-50">
+          {/* <select className="form-select w-50">
             <option selected>BREAKFAST</option>
-            <option value="1">LUNCH</option>
-            <option value="2">DINNER</option>
-            <option value="3">SNACK</option>
-          </select>
+            <option value="">LUNCH</option>
+            <option value="">DINNER</option>
+            <option value="">SNACK</option>
+          </select> */}
         </div>
       </div>
     </div>
