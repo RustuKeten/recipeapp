@@ -3,29 +3,31 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <ul className="nav justify-content-space-between">
-        <Link to="/home" className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
-            <small>&lt;Rustu</small>
+    <div className="container-fluid bg-light p-4 fs-4">
+      <div className="row d-flex ">
+        <div className="col-6 d-flex ">
+          <Link to="/home" className="text-decoration-none ">
+            <big>&lt;R</big>
+            <small>USTU</small>
             <small>KETEN</small> <big>R</big>
             <small>ECIPE/&gt;</small>
-          </a>
-        </Link>
-        <Link to="/about" className="nav-item">
-          <a className="nav-link" href="#">
+          </Link>
+        </div>
+        <div className="col-6 d-flex justify-content-end gap-5 ">
+          <Link to="/about" className="text-decoration-none ">
             ABOUT
-          </a>
-        </Link>
-        <li className="nav-item">
-          <a className="nav-link" href="https://github.com/RustuKeten">
+          </Link>
+          <a
+            href="https://github.com/RustuKeten"
+            className="text-decoration-none "
+          >
             GITHUB
           </a>
-        </li>
-        <Link to="/" className="nav-item">
-          <a className="nav-link">LOG OUT</a>
-        </Link>
-      </ul>
+          <Link to="/" className="text-decoration-none ">
+            LOG OUT
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

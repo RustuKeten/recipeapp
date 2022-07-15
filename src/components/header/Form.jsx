@@ -2,40 +2,47 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 const Form = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [nameInput, setNameInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
 
   const navigate = useNavigate();
+  // console.log(nameInput);
+  // console.log(passwordInput);
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
+  const name = "rustu";
+  const password = "1234";
+
+  const handleSubmit = () => {
+    if (nameInput !== name && passwordInput !== password) {
+      alert("Invalid name/password!");
+    } else {
+      navigate("/home");
+    }
+  };
 
   return (
     <div className="Login">
       <form>
         <input
           autoFocus
-          type="email"
-          value={email}
+          type="text"
           placeholder="USERNAME"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setNameInput(e.target.value)}
         />
         <br />
         <input
           autoFocus
           type="password"
-          value={password}
           placeholder="PASSWORD"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setPasswordInput(e.target.value)}
         />
       </form>
       <button
         block
         size="lg"
         type="submit"
-        disabled={!validateForm()}
-        onClick={() => navigate("/home")}
+        // disabled={!validateForm()}
+        onClick={handleSubmit}
       >
         LOGIN
       </button>
